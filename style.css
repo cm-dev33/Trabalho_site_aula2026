@@ -1,0 +1,25 @@
+body {
+    background-color: #bbbbb2;
+    font-family: Arial, sans-serif; 
+}
+
+nav {
+    background-color: #dbd2d2;
+    overflow: hidden;
+    
+}
+
+body ul li a {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+ nav a:hover {
+        background-color:   111123w2#d49999;
+}
