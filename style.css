@@ -1,25 +1,383 @@
+/* ======================================================== */
+/* 2. RESET BÁSICO E BOX MODEL GLOBAL                       */
+/* ======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #bbbbb2;
-    font-family: Arial, sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
 }
 
-nav {
-    background-color: #dbd2d2;
-    overflow: hidden;
-    
+/* Estilização Geral do Header */
+header {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
 }
-
-body ul li a {
-    display: block;
-    color: #000;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+/* NOVO: ESTILIZAÇÃO DIFERENCIADA PARA O TÍTULO PRINCIPAL */
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
     
+    /* Cria o efeito de texto em degradê (Azul Tech para Ciano) */
+    background: linear-gradient(45deg, #2563eb, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Adiciona uma sombra de luz neon bem sutil atrás do texto */
+    text-shadow: 0px 4px 12px rgba(37, 99, 235, 0.15);
 }
- nav a:hover {
-        background-color:   111123w2#d49999;
+header img {
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+/* Formulário de Busca do Header (GET) */
+header form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ======================================================== */
+/* 3. ESTILIZAÇÃO DA ESTRUTURA SEMÂNTICA E LAYOUT          */
+/* ======================================================== */
+
+/* Menu de Navegação (<nav>) */
+nav {
+    background-color: #0f172a; /* Azul escuro tecnológico */
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav h2 {
+    display: none; /* Oculta o título visualmente, mantendo a semântica */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #cbd5e1; /* Cor cinza clara para o link */
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse (:hover) no Menu */
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: #2563eb; /* Azul brilhante ao passar o mouse */
+}
+
+/* Layout do Conteúdo Principal (<main>) */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Seção que agrupa a vitrine e a barra lateral */
+main section:first-of-type {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Garante que fique responsivo em telas menores */
+}
+
+main section:first-of-type h2 {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+/* Barra Lateral (<aside>) */
+aside {
+    flex: 1;
+    min-width: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+aside h3 {
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 5px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+    font-weight: 500;
+}
+
+aside ul li:last-child {
+    border-bottom: none;
+}
+
+/* Rodapé (<footer>) */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #2563eb;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ======================================================== */
+/* 4. ESTILIZAÇÃO DA VITRINE DE PRODUTOS (<article>)       */
+/* ======================================================== */
+
+/* Cards de Produto */
+article {
+    flex: 2;
+    min-width: 300px;
+    background-color: #ffffff;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+article h3 {
+    color: #1e293b;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* Link/Botão do Carrinho e Links de Detalhes */
+article a {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: background-color 0.3s;
+}
+
+article a:hover {
+    background-color: #1d4ed8;
+}
+
+article a[target="_blank"] {
+    background-color: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    margin-left: 10px;
+}
+
+article a[target="_blank"]:hover {
+    background-color: #f0fdf4;
+    color: #1d4ed8;
+}
+
+/* Multimídia Responsiva */
+article img, 
+video {
+    max-width: 100%; /* Imagens e vídeos não passam do tamanho do card */
+    height: auto;    /* Mantém a proporção correta */
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* ======================================================== */
+/* 5. ESTILIZAÇÃO DA TABELA COMPARATIVA (<table>)          */
+/* ======================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove o espaço duplo entre as bordas */
+    margin: 30px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho da Tabela */
+thead th {
+    background-color: #0f172a; /* Cor em destaque */
+    color: #ffffff;
+    font-weight: bold; /* Texto em negrito */
+    text-align: left;
+}
+
+/* Espaçamento e linhas divisórias simples */
+th, td {
+    padding: 14px 20px; /* Espaçamento interno */
+    border-bottom: 1px solid #e2e8f0; /* Linha divisória simples */
+}
+
+/* Efeito de alternância de cores (Zebra Striping) */
+tbody tr:nth-child(even) {
+    background-color: #f8fafc; /* Linhas pares ganham fundo cinza bem claro */
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9; /* Destaque ao passar o mouse na linha */
+}
+
+/* ======================================================== */
+/* 6. ESTILIZAÇÃO DOS FORMULÁRIOS (GET e POST)              */
+/* ======================================================== */
+
+/* Seções de Formulários */
+section#checkout {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+/* Estrutura de Fieldset e Legend */
+fieldset {
+    border: 1px solid #cbd5e1; /* Bordas sutis */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+legend {
+    font-weight: bold;
+    color: #2563eb; /* Tipografia destacada em azul */
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Organização dos campos em bloco */
+fieldset p {
+    margin-bottom: 15px; /* Margem inferior para separação dos elementos */
+}
+
+fieldset label {
+    display: block; /* Organiza os rótulos acima dos campos */
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* Campos de Entrada (input, select, textarea) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+    width: 100%; /* Largura total para os campos de texto/seleção */
+    padding: 10px 14px; /* Padding interno */
+    border: 1px solid #cbd5e1;
+    border-radius: 6px; /* Cantos arredondadas e suavizados */
+    font-size: 1rem;
+    color: #333333;
+    background-color: #f8fafc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Indicador visual de foco (:focus) */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb; /* Destaca a borda em azul */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* Sombra suave azul ao redor */
+    background-color: #ffffff;
+}
+
+/* Campos inline (Radio e Checkbox) */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Botões de Ação */
+button,
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: all 0.3s ease; /* Transições suaves */
+    margin: 5px;
+}
+
+/* Estilo do botão principal (Submit) */
+button[type="submit"],
+input[type="submit"] {
+    background-color: #2563eb; /* Cor de fundo atrativa */
+    color: #ffffff;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #1d4ed8; /* Alteração de cor ao passar o mouse */
+}
+
+/* Estilo do botão secundário (Reset) */
+button[type="reset"],
+input[type="reset"] {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+button[type="reset"]:hover,
+input[type="reset"]:hover {
+    background-color: #cbd5e1;
 }
