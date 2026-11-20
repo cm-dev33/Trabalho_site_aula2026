@@ -381,3 +381,45 @@ button[type="reset"]:hover,
 input[type="reset"]:hover {
     background-color: #cbd5e1;
 }
+
+/* =========================================
+   NOVAS CLASSES PARA A ETAPA 5 (JAVASCRIPT)
+   ========================================= */
+
+/* Modo Escuro ativado pelo botão de tema */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Destaque vermelho para campos inválidos no formulário */
+input.campo-erro {
+  border: 2px solid #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Estilo das mensagens dinâmicas na tela */
+.oculto {
+  display: none;
+}
+
+.aviso-ativo {
+  display: block;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.texto-erro {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.texto-sucesso {
+  color: #198754;
+  font-weight: bold;
+}
+

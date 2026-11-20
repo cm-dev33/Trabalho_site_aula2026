@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce — Versão 5.0</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Barra de Navegação com Botão de Tema (Opção B) -->
+  <header>
+    <nav class="navbar">
+      <h1>TechStore</h1>
+      <button id="btn-tema" type="button">Modo Escuro</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Vitrine de Produtos (Opção A) -->
+    <section class="vitrine">
+      <h2>Produtos em Destaque</h2>
+
+      <article class="produto-card">
+        <h3 class="produto-nome">Teclado Mecânico RGB</h3>
+        <p class="produto-preco">R$ 349,90</p>
+        <button class="btn-comprar" type="button">Comprar Produto</button>
+      </article>
+
+      <article class="produto-card">
+        <h3 class="produto-nome">Mouse Gamer Sem Fio</h3>
+        <p class="produto-preco">R$ 199,90</p>
+        <button class="btn-comprar" type="button">Comprar Produto</button>
+      </article>
+
+      <!-- Aviso dinâmico quando o cliente clica em comprar -->
+      <div id="aviso-compra" class="oculto"></div>
+    </section>
+
+    <!-- Formulário de Cadastro / Checkout (Opção C + Item 3) -->
+    <section class="checkout">
+      <h2>Cadastro e Finalização de Pedido</h2>
+
+      <form id="form-checkout" novalidate>
+        <div class="campo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" placeholder="seuemail@exemplo.com">
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha (mínimo 6 caracteres):</label>
+          <input type="password" id="senha" placeholder="Crie uma senha">
+        </div>
+
+        <!-- Simulador de Frete (Opção C) -->
+        <div class="campo">
+          <label for="cep">CEP para entrega:</label>
+          <div class="linha-cep">
+            <input type="text" id="cep" maxlength="9" placeholder="00000-000">
+            <button id="btn-frete" type="button">Calcular Frete</button>
+          </div>
+          <p id="resultado-frete"></p>
+        </div>
+
+        <!-- Mensagem de erro ou sucesso do formulário -->
+        <p id="mensagem-formulario"></p>
+
+        <button type="submit" class="btn-enviar">Finalizar Cadastro e Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Vínculo obrigatório com defer no final do body -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
