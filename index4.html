@@ -1,81 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-commerce — Versão 5.0</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTech - Conectando Você ao Futuro da Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Barra de Navegação com Botão de Tema (Opção B) -->
-  <header>
-    <nav class="navbar">
-      <h1>TechStore</h1>
-      <button id="btn-tema" type="button">Modo Escuro</button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Vitrine de Produtos (Opção A) -->
-    <section class="vitrine">
-      <h2>Produtos em Destaque</h2>
-
-      <article class="produto-card">
-        <h3 class="produto-nome">Teclado Mecânico RGB</h3>
-        <p class="produto-preco">R$ 349,90</p>
-        <button class="btn-comprar" type="button">Comprar Produto</button>
-      </article>
-
-      <article class="produto-card">
-        <h3 class="produto-nome">Mouse Gamer Sem Fio</h3>
-        <p class="produto-preco">R$ 199,90</p>
-        <button class="btn-comprar" type="button">Comprar Produto</button>
-      </article>
-
-      <!-- Aviso dinâmico quando o cliente clica em comprar -->
-      <div id="aviso-compra" class="oculto"></div>
-    </section>
-
-    <!-- Formulário de Cadastro / Checkout (Opção C + Item 3) -->
-    <section class="checkout">
-      <h2>Cadastro e Finalização de Pedido</h2>
-
-      <form id="form-checkout" novalidate>
-        <div class="campo">
-          <label for="nome">Nome Completo:</label>
-          <input type="text" id="nome" placeholder="Digite seu nome">
+    <!-- 1. Identificação da Loja (Topo / Cabeçalho) cm-digital -->
+    <div>
+        <div align="right" style="padding: 10px;">
+            <button id="btn-tema" type="button">Modo Escuro</button>
         </div>
 
-        <div class="campo">
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" placeholder="seuemail@exemplo.com">
+        <h1 align="center">NexusTech</h1>
+        <h2 align="center">O seu Marketplace Tech</h2>
+        <p>Conectando você ao futuro com os melhores periféricos e hardwares.</p>
+        <img src="https://placeholder.com" alt="Logotipo oficial da loja NexusTech">
+        <p>Aproveite nossa condição especial: <strong>Frete grátis para todo o Brasil</strong> em todas as compras hoje!</p>
+        <hr>
+    </div>
+
+    <!-- 2. Vitrine de Produtos (Catálogo Inicial) -->
+    <div>
+        <h2>Produtos em Destaque</h2>
+
+        <!-- Produto 1 carlos maciel -->
+        <div class="produto-card">
+            <h3 class="produto-nome">Teclado Mecânico RGB</h3>
+            <img src="https://placeholder.com" alt="Teclado mecânico com iluminação RGB colorida">
+            <p>Teclado de alta performance com <i>Switch Blue</i> e layout compacto.</p>
+            <p>Preço: <span>R$ 250,00</span> — <b>À vista no PIX</b></p>
+            <button class="btn-comprar" type="button">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="campo">
-          <label for="senha">Senha (mínimo 6 caracteres):</label>
-          <input type="password" id="senha" placeholder="Crie uma senha">
+        <br>
+
+        <!-- Produto 2 carlos maciel -->
+        <div class="produto-card">
+            <h3 class="produto-nome">Mouse Gamer Laser</h3>
+            <img src="https://placeholder.com" alt="Mouse gamer ergonômico preto com luzes LED">
+            <p>Mouse ergonômico com sensor de até 12000 <i>DPI</i> para máxima precisão.</p>
+            <p>Preço: <span>R$ 180,00</span> — <b>À vista no PIX</b></p>
+            <button class="btn-comprar" type="button">Adicionar ao Carrinho</button>
         </div>
 
-        <!-- Simulador de Frete (Opção C) -->
-        <div class="campo">
-          <label for="cep">CEP para entrega:</label>
-          <div class="linha-cep">
-            <input type="text" id="cep" maxlength="9" placeholder="00000-000">
-            <button id="btn-frete" type="button">Calcular Frete</button>
-          </div>
-          <p id="resultado-frete"></p>
-        </div>
+        <!-- Alerta dinâmico exibido pelo JS ao clicar em comprar -->
+        <div id="aviso-compra" class="oculto"></div>
+    </div>
 
-        <!-- Mensagem de erro ou sucesso do formulário -->
-        <p id="mensagem-formulario"></p>
+    <br>
+    <hr>
 
-        <button type="submit" class="btn-enviar">Finalizar Cadastro e Pedido</button>
-      </form>
-    </section>
-  </main>
+    <!-- 3. Detalhamento Técnico do Produto Principal carlos maciel -->
+    <div>
+        <h4>Especificações Técnicas do Produto em Destaque</h4>
+        <p>Confira os detalhes operacionais do nosso Teclado Mecânico RGB. Garantimos que este produto possui a melhor durabilidade do mercado, oferecendo <em>1 ano de garantia de fábrica exclusiva</em> contra qualquer defeito de fabricação.</p>
+        
+        <ul>
+            <li>Tipo de switch: Mecânico (<i>Switch Blue</i>)</li>
+            <li>Iluminação: <i>RGB</i> com 16.8 milhões de cores</li>
+            <li>Conectividade: Cabo USB tipo C removível</li>
+            <li>Material: Plástico ABS injetado</li>
+        </ul>
+    </div>
 
-  <!-- Vínculo obrigatório com defer no final do body -->
-  <script src="js/script.js" defer></script>
+    <br>
+    <hr>
+
+    <!-- 4. Checkout, Cálculo de Frete e Validação de Formulário (Etapa 5) -->
+    <div id="carrinho">
+        <h2>Finalizar Cadastro e Pedido</h2>
+        
+        <form id="form-checkout" novalidate>
+            <p>
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" placeholder="seuemail@exemplo.com">
+            </p>
+
+            <p>
+                <label for="senha">Senha (mínimo 6 caracteres):</label><br>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+            </p>
+
+            <!-- Simulador de Frete (Opção C) -->
+            <p>
+                <label for="cep">CEP para entrega:</label><br>
+                <input type="text" id="cep" maxlength="9" placeholder="00000-000">
+                <button id="btn-frete" type="button">Calcular Frete</button>
+            </p>
+            <p id="resultado-frete"></p>
+
+            <!-- Mensagem de erro ou sucesso da validação -->
+            <p id="mensagem-formulario"></p>
+
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </div>
+
+    <br>
+    <hr>
+
+    <!-- 5. Rodapé Informativo carlos maciel -->
+    <div align="center">
+        <p>&copy; 2026 CM DigitalTech Todos os direitos reservados.</p>
+        <p>Contato suporte: <a href="mailto:suportecarlosmaciel.com">suportecarlosmaciel.com</a></p>
+    </div>
+    <h6 align="center">Desenvolvido por Carlos Maciel aluno Estacio 2026 aula Devweb - CM DigitalTech</h6>
+
+    <div align="left" style="background-color: black; padding: 10px;">
+        <a href="index3.html" style="color: red;">Voltar</a>
+    </div>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
