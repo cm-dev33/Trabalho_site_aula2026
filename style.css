@@ -423,3 +423,101 @@ input.campo-erro {
   font-weight: bold;
 }
 
+/* =========================================================
+   ESTILOS DA PÁGINA INDEX4.HTML E INTERATIVIDADE (ETAPA 5)
+   ========================================================= */
+
+/* Estilização dos cards de produto e formulário */
+.produto-card,
+#carrinho {
+  background-color: #ffffff;
+  color: #222222;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 700px;
+}
+
+/* Botões gerais */
+button {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+}
+
+/* Campos do formulário */
+#form-checkout input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   CLASSES DINÂMICAS DO JAVASCRIPT
+   ========================================================= */
+
+/* Modo Escuro (Opção B) */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .produto-card,
+body.dark-mode #carrinho {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #333333;
+}
+
+body.dark-mode input {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #555555;
+}
+
+/* Borda vermelha para campos inválidos (Item 3) */
+#form-checkout input.campo-erro {
+  border: 2px solid #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Mensagens na tela */
+.oculto {
+  display: none;
+}
+
+.aviso-ativo {
+  display: block;
+  max-width: 700px;
+  margin: 15px auto;
+  padding: 12px;
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.texto-erro {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.texto-sucesso {
+  color: #198754;
+  font-weight: bold;
+}
+
+
